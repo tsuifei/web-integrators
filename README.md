@@ -1,6 +1,5 @@
 # Web integration README.md
-### Intégrer des maquette web à l'aide de HTML, CSS, Bootstrap et SCSS
-
+### web-integrators
 | Technique                                                                                    | maquette |
 |-------------------------------------------------------------------------------------------- | -------- |
 | **Maquette 6** <br> Utiliser Préprocesseur de CSS: SCSS <br> Utiliser Framework CSS: Bootstrap 4 <br> Organiser et realiser en Responsive web design <br> Integre Fontawesome <br> (en cours...) | img |
