@@ -1,0 +1,18 @@
+// @import '../modules/all';
+// @import '../modules/Variables';
+// 可試著把會重複的部份抽離出來，以便束帶，組件化，讓這隻也可以給別的專案用。
+$footer_font_color: lighten($dark-color, 15%);
+$footer_background_color: darken($light-color, 15%);
+$footer_link_color: $primary-color;
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: $footer_font_color;
+  padding: 2rem 0;
+  background-color: $footer_background_color;
+  font-family: $font-base;
+  .link {
+    color: $footer_link_color;
+  }
+}

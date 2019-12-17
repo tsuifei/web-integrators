@@ -1,0 +1,74 @@
+
+
+.about {
+  background: url(../imgs/sea-horse-bg.jpg) ;
+  background-position: 35% 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $light-color;
+  padding: 2rem 10%;
+  @include rwd($tablet) {
+    background-position: 35% 75%;
+    padding: 4rem 10%;
+  }
+  @include rwd($desktop) {
+    background-position: top center;
+
+  }
+  p {
+    font-family: $font-base;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+    @include rwd($tablet) {
+      font-size: 1.2rem;
+    }
+  }
+}
+.about-container {
+  padding-bottom: 1rem;
+  @include rwd($tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+.about-content {
+  max-width: 100%;
+  @include rwd($tablet) {
+    width: 45%;
+  }
+  @include rwd($desktop) {
+    width: 43%;
+  }
+}
+.about-content:nth-child(2){
+  padding-top: 0;
+  @include rwd($tablet) {
+    padding-top: 18rem;
+  }
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 0;
+  @include rwd($tablet) {
+    font-size: 2.5rem;
+  }
+}
+.isolation-bloc {
+  text-align: center;
+  @include isolation(inline-block, 2rem);
+}
+
+.btn-light {
+  // @include btn;
+  @extend %btn;
+  background-color: $white-color;
+  color: $black-color;
+  display: block;
+  margin: 0 auto;
+}

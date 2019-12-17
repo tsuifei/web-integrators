@@ -1,0 +1,297 @@
+/* base */
+
+body {
+    margin: 0;
+    font-family: 'times new roman', times, serif;
+    font-size: 1rem;
+    color: #666;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+header {
+    background-color: #525050;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.header-container {
+    padding: 32px 0;
+    margin: auto;
+    width: 100%;
+    max-width: 1024px;
+    font-family: 'raleway', sans-serif;
+}
+
+.header-container a {
+    display: inline-block;
+}
+
+nav {
+    font-family: 'raleway', sans-serif;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav a {
+    color: #bebebe;
+    padding-right: 65px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.cart {
+    vertical-align: middle;
+    width: 32px;
+    height: 40px;
+    background: url(../img/cart.svg) no-repeat center top;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+}
+
+.cart span {
+    vertical-align: sub;
+}
+
+
+/* 出血 */
+
+.bg-banner {
+    background: url(../img/cover.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    height: 568px;
+    margin-top: 103px;
+}
+
+.bg-banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 居中容器 */
+
+.banner {
+    width: 40%;
+    text-align: center;
+    background-color: rgba(253, 253, 253, 0.5);
+    padding: 30px 60px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slogan {
+    background-color: #e3e3e3;
+    text-align: center;
+    color: #5e5e5f;
+    font-size: 1rem;
+    font-family: 'raleway', sans-serif;
+    letter-spacing: 5px;
+    padding: 20px 0;
+}
+
+.footer-container {
+    margin: auto;
+    max-width: 924px;
+    width: 72%px;
+}
+
+.site-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    padding-right: 100px;
+    vertical-align: middle;
+    color: #d4d4d4;
+}
+
+
+/* banner */
+
+.banner-title {
+    margin: 0 0 20px;
+    font-size: 3.5rem;
+    color: #303132;
+}
+
+.bnt-banner {
+    padding: 10px 60px;
+    font-size: 1.2rem;
+    font-family: 'Raleway', serif;
+    background-color: #303132;
+    color: #fff;
+    border: none;
+}
+
+.promo-container {
+    text-align: center;
+}
+
+.must-have p {
+    font-size: 1.5rem;
+    font-family: 'Raleway', serif;
+    letter-spacing: 10px;
+}
+
+hr {
+    width: 30px;
+    border-top: 1px solid #303132;
+}
+
+.promo-items {
+    font-size: 0;
+    margin: 88px auto;
+    width: 80%;
+    max-width: 1024px;
+}
+
+.promo-title {
+    font-size: 2.6rem;
+    letter-spacing: 12px;
+    color: #303132;
+    margin-top: 80px;
+}
+
+.item {
+    display: inline-block;
+    width: 32%;
+    padding-top: 45%;
+    margin-right: 1%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.item:nth-child(1) {
+    background-image: url(../img/pl.png);
+}
+
+.item:nth-child(2) {
+    background-image: url(../img/pm.png);
+}
+
+.item:nth-child(3) {
+    background-image: url(../img/pr.png);
+    margin-right: 0;
+}
+
+.item p {
+    margin: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 17px 0;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #303132;
+    text-transform: uppercase;
+    font-family: 'Raleway', serif;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #535151;
+    color: #fff;
+    font-family: 'raleway', sans-serif;
+    font-size: 0.9rem;
+    padding: 70px 0 40px;
+}
+
+.footer-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+}
+
+.social-media {
+    padding-right: 15%;
+}
+
+.social-media a {
+    padding-right: 15px;
+    color: #fff;
+    display: inline-block;
+}
+
+.footer-newsletter {
+    width: 35%;
+    max-width: 330px;
+    font-size: 1rem;
+}
+
+input {
+    font-size: 1rem;
+}
+
+form {
+    text-align: right;
+}
+
+input[type=text] {
+    width: 100%;
+    background-color: #535151;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #ccc;
+    color: #000;
+    box-sizing: border-box;
+    padding: 7px 5px;
+    margin-top: 10px;
+    border: none;
+}
+
+.footer-col {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.footer-col p {
+    font-size: 1rem;
+}
+
+.contact {
+    text-align: center;
+    padding-left: 15%;
+    line-height: 1rem;
+}
+
+.contact a:link {
+    display: block;
+    color: #fff;
+    line-height: 1.2rem;
+}
+
+.copyright {
+    text-align: center;
+    letter-spacing: 1px;
+}

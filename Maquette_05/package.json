@@ -1,0 +1,15 @@
+{
+  "name": "tsuifei_t5",
+  "version": "1.0.0",
+  "description": "integration T5",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass --source-map true -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

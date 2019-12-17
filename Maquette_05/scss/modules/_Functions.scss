@@ -1,0 +1,17 @@
+// function -> return
+// Set Text Color 自動偵測字體顏色該深or淺
+@function set-text-color($color){
+  @if (lightness($color) > 50){
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Transform mixin 轉換小動畫
+// 因 css transform 最好有前贅詞讓瀏覽器相容，可統一整理在這裡就不需要每次都寫
+@mixin transform($property) {
+  --webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

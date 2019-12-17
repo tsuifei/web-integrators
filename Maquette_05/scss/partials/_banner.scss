@@ -1,0 +1,57 @@
+
+
+.banner {
+  min-height: calc(100vh - 51px);
+  padding-top: 12vh;
+  background: url(../imgs/banner.png) 50% center / cover no-repeat;
+  color: $light-color;
+  text-align: center;
+  font-family: $font-title;
+  letter-spacing: 0.2rem;
+  h1 {
+    font-size: 4rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+  }
+  span {
+    font-family: $font-subtitle;
+    margin-left: 0.5rem;
+    text-transform: lowercase;
+    letter-spacing: 0;
+  }
+  h2 {
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+  }
+  p {
+    margin: auto;
+    padding-top: 10%;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    display: block;
+    width: 95%;
+    @include rwd($tablet) {
+      width: 50%; line-height: 2rem;
+    }
+    @include rwd($desktop) {
+      font-size: 1.1rem;
+      width: 45%; 
+      padding-top: 10vh;
+    }
+  }
+}
+.isolation-point {
+  font-size: 0.7rem;
+  padding-top: 15%;
+  color:$light-color;
+  @include isolation(block, 0.8rem);
+  @include rwd($tablet) {
+    padding-top: 15vh;
+  }
+  @include rwd($desktop) {
+    padding-top: 10vh;
+  }
+}

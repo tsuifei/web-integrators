@@ -1,0 +1,396 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lobster|Noto+Serif|Source+Sans+Pro:300");
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans|Source+Sans+Pro&display=swap");
+.btn-dark, .btn-light {
+  padding: 0.6rem 0;
+  border: none;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  width: 250px;
+  cursor: pointer; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  background-color: #f4f4f4; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+header {
+  background-color: #360836;
+  width: 100%; }
+
+.my-nav {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem; }
+
+label {
+  /* 進入手機版就出現漢堡選單 */
+  font-size: 2rem;
+  color: #ccc;
+  display: block;
+  cursor: pointer;
+  padding-left: 1rem; }
+  @media only screen and (min-width: 768px) {
+    label {
+      display: none;
+      /* 在桌機版時先隱藏 */ } }
+
+.my-menu {
+  text-align: center;
+  display: none;
+  text-decoration: none; }
+  .my-menu a {
+    display: block;
+    border-top: 1px solid #f4f4f4;
+    padding: 0.8rem; }
+    .my-menu a:link, .my-menu a:visited {
+      color: #f4f4f4; }
+    .my-menu a:hover, .my-menu a:active, .my-menu a.active {
+      color: #fc5d8a; }
+  @media only screen and (min-width: 768px) {
+    .my-menu {
+      display: flex;
+      justify-content: center;
+      border-bottom: none;
+      color: #f4f4f4; }
+      .my-menu a {
+        border: none; } }
+
+#my-toggle {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    #my-toggle {
+      /* input產生的勾選框 也需隱藏 */
+      display: none; } }
+
+#my-toggle:checked + .my-menu {
+  display: block; }
+
+.banner {
+  min-height: calc(100vh - 51px);
+  padding-top: 12vh;
+  background: url(../imgs/banner.png) 50% center/cover no-repeat;
+  color: #f4f4f4;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  letter-spacing: 0.2rem; }
+  .banner h1 {
+    font-size: 4rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    line-height: 5rem; }
+  .banner span {
+    font-family: "Lobster", cursive;
+    margin-left: 0.5rem;
+    text-transform: lowercase;
+    letter-spacing: 0; }
+  .banner h2 {
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem; }
+  .banner p {
+    margin: auto;
+    padding-top: 10%;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    display: block;
+    width: 95%; }
+    @media only screen and (min-width: 768px) {
+      .banner p {
+        width: 50%;
+        line-height: 2rem; } }
+    @media only screen and (min-width: 992px) {
+      .banner p {
+        font-size: 1.1rem;
+        width: 45%;
+        padding-top: 10vh; } }
+
+.isolation-point {
+  font-size: 0.7rem;
+  padding-top: 15%;
+  color: #f4f4f4; }
+  .isolation-point::before {
+    content: "●";
+    display: block;
+    padding: 0.8rem; }
+  .isolation-point::after {
+    content: "●";
+    display: block;
+    padding: 0.8rem; }
+  @media only screen and (min-width: 768px) {
+    .isolation-point {
+      padding-top: 15vh; } }
+  @media only screen and (min-width: 992px) {
+    .isolation-point {
+      padding-top: 10vh; } }
+
+.profiles {
+  position: relative;
+  top: -70px; }
+
+.section-name {
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0048;
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 20px;
+  letter-spacing: 0.2rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 1; }
+  .section-name::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-width: 20px;
+    border-color: #ff0048 transparent transparent transparent;
+    border-style: solid;
+    z-index: 99; }
+  @media only screen and (min-width: 768px) {
+    .section-name {
+      width: 35%; } }
+  @media only screen and (min-width: 992px) {
+    .section-name {
+      width: 30%; } }
+
+.profiles-content {
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .profiles-content {
+      display: flex;
+      flex-wrap: wrap; } }
+
+/* 圖片容器 */
+.profile-img {
+  position: relative;
+  flex-basis: 100%;
+  height: auto; }
+  @media only screen and (min-width: 768px) {
+    .profile-img {
+      flex-basis: 50%; } }
+  @media only screen and (min-width: 992px) {
+    .profile-img {
+      flex-basis: 25%; } }
+
+/* 圖片本身 */
+.profile-img img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* 滑鼠滑過圖片的狀態 -> 包住文字的區塊 */
+.profile-img:hover .profile-img-hover {
+  opacity: .7; }
+  @media only screen and (min-width: 768px) {
+    .profile-img:hover .profile-img-hover {
+      opacity: 1; } }
+
+/* 包住文字的區塊 */
+.profile-img-hover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* 用 flex 把內容居中 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #fc5d8a;
+  opacity: 0;
+  transition: opacity 0.4s ease-in 0.1s; }
+
+/* 滑鼠滑過圖片的狀態 -> 出現文字 */
+.profile-img:hover .profile-text h5 {
+  display: block; }
+
+.profile-text h5 {
+  font-size: 1.5rem;
+  color: #fff; }
+
+.team {
+  text-align: center;
+  color: #ff0048;
+  letter-spacing: 0.3rem;
+  padding: 4rem 0 3rem; }
+  .team .team-slogan {
+    background-color: #ff0048;
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: 300; }
+    .team .team-slogan::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-width: 20px;
+      border-color: #ff0048 transparent transparent transparent;
+      border-style: solid;
+      z-index: 99; }
+  .team h2 {
+    padding: 3rem 0;
+    font-size: 1.8rem;
+    font-weight: 400; }
+
+.team-content {
+  margin: auto;
+  width: 90%; }
+  @media only screen and (min-width: 768px) {
+    .team-content {
+      width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; } }
+  @media only screen and (min-width: 992px) {
+    .team-content {
+      width: 80%; } }
+
+.team-member {
+  min-width: 50%;
+  padding-bottom: 2rem; }
+  @media only screen and (min-width: 768px) {
+    .team-member {
+      padding-bottom: 3rem; } }
+
+.member-img {
+  font-size: 0; }
+
+.member-name {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  padding-top: 1rem; }
+
+.post {
+  font-size: 1.2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0;
+  color: #595959;
+  font-weight: 300; }
+
+.btn-dark {
+  background-color: #000;
+  color: #fff; }
+
+.about {
+  background: url(../imgs/sea-horse-bg.jpg);
+  background-position: 35% 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f4f4f4;
+  padding: 2rem 10%; }
+  @media only screen and (min-width: 768px) {
+    .about {
+      background-position: 35% 75%;
+      padding: 4rem 10%; } }
+  @media only screen and (min-width: 992px) {
+    .about {
+      background-position: top center; } }
+  .about p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+    line-height: 1.5rem; }
+    @media only screen and (min-width: 768px) {
+      .about p {
+        font-size: 1.2rem; } }
+
+.about-container {
+  padding-bottom: 1rem; }
+  @media only screen and (min-width: 768px) {
+    .about-container {
+      display: flex;
+      justify-content: space-between; } }
+
+.about-content {
+  max-width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .about-content {
+      width: 45%; } }
+  @media only screen and (min-width: 992px) {
+    .about-content {
+      width: 43%; } }
+
+.about-content:nth-child(2) {
+  padding-top: 0; }
+  @media only screen and (min-width: 768px) {
+    .about-content:nth-child(2) {
+      padding-top: 18rem; } }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 0; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 2.5rem; } }
+
+.isolation-bloc {
+  text-align: center; }
+  .isolation-bloc::before {
+    content: "●";
+    display: inline-block;
+    padding: 2rem; }
+  .isolation-bloc::after {
+    content: "●";
+    display: inline-block;
+    padding: 2rem; }
+
+.btn-light {
+  background-color: #fff;
+  color: #000;
+  display: block;
+  margin: 0 auto; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: #595959;
+  padding: 2rem 0;
+  background-color: #cecece; }
+  footer p {
+    font-family: "Source Sans Pro", sans-serif; }
+  footer span {
+    color: #ff0048; }
+
+/*# sourceMappingURL=main.css.map */

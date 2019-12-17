@@ -1,0 +1,104 @@
+
+// Link 連結樣式
+@mixin link {
+  &:link, &:visited {
+    @content;
+  }
+}
+@mixin link-hover { // 被點擊後的樣式
+  &:hover, &:active, &.active {
+    @content;
+  }
+}
+// @include link();
+// @include link-hover();
+
+//isolation-point
+@mixin isolation($display, $padding) {
+  &::before{
+    content:"●";
+    display:$display;
+    padding: $padding;
+  }
+  &::after{
+    content:"●";
+    display:$display;
+    padding: $padding;
+  }
+}
+
+// 
+@mixin dialogue($font-size, $letter-spacing, $bg-width, $padding) {
+  background-color: $primary-color;
+  color: $light-color;
+  font-size: $font-size;
+  font-family:$font-base;
+  padding: $padding;
+  letter-spacing:$letter-spacing;
+  position: relative;
+  width: $bg-width;
+  text-align: center;
+  @content;
+  &::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top:100%;
+    left:50%;
+    transform:translate(-50%,0);
+    border-width:20px;
+    border-color: $primary-color transparent transparent transparent;
+    border-style:solid;
+    z-index: 99;
+  }
+}
+
+// // btn extend
+// %btn {
+//   // display: inline-block;
+//   padding: 0.6rem 0;
+//   border: none;
+//   text-decoration:none;
+//   font-family: $font-base;
+//   font-size: 1.25rem;
+//   text-transform: uppercase;
+//   letter-spacing: 0;
+//   width: 250px;
+//   cursor: pointer;
+// }
+// .btn-dark {
+//   @extend %btn;
+//   background-color: $black-color;
+//   color: $white-color;
+// }
+
+// .btn-light {
+//   @extend %btn;
+//   background-color: $white-color;
+//   color: $black-color;
+// }
+
+// @mixin btn {
+//   display: inline-block;
+//   padding: 0.6rem 0;
+//   border: none;
+//   text-decoration:none;
+//   font-family: $font-base;
+//   font-size: 1.25rem;
+//   text-transform: uppercase;
+//   letter-spacing: 0;
+//   width: 250px;
+//   cursor: pointer;
+//   @content;
+// }
+// .btn-dark {
+//     @include btn;
+//     background-color: $black-color;
+//     color: $white-color;
+// }
+
+// .btn-light {
+//   @include btn;
+//   background-color: $white-color;
+//   color: $black-color;
+// }

@@ -1,0 +1,57 @@
+// HEADER
+header {
+  background-color: $third-color;
+  width: 100%;
+}
+
+// NAV 
+.my-nav {
+  // margin: auto;
+  display: block;
+  font-family: $font-base;
+  font-size: 1rem;
+}
+label { /* 進入手機版就出現漢堡選單 */
+  font-size:2rem;
+  color:#ccc;
+  display:block;
+  cursor:pointer;
+  padding-left: 1rem;
+  @include rwd($tablet) {
+    display:none; /* 在桌機版時先隱藏 */
+  }
+}
+.my-menu {
+  text-align:center; 
+  display:none;
+  text-decoration: none;
+  a {
+    display:block;
+    border-top: 1px solid $light-color;
+    padding: 0.8rem;
+    @include link{
+      color: $light-color;
+    };
+    @include link-hover{
+      color: $secondary-color
+    };
+  }
+  @include rwd($tablet) {
+    display:flex;
+    justify-content: center;
+    border-bottom: none;
+    color: $light-color; 
+    a {
+      border: none;
+    }
+  }
+}
+#my-toggle {
+  display: none;
+  @include rwd($tablet) {/* input產生的勾選框 也需隱藏 */
+    display:none;
+  }
+}
+#my-toggle:checked + .my-menu {
+  display:block;
+}
