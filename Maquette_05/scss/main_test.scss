@@ -1,0 +1,51 @@
+
+@import 'variables';
+@import 'functions';
+
+.section {
+  padding: 2rem;
+  h1{
+    color:$primary-color;
+  }
+  &-a {
+    background-color: $primary-color;
+    color: $light-color;
+  }
+  &-b {
+    background-color: $secondary-color;
+    color: $light-color;
+  }
+}
+
+%btn-read-more {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  text-decoration:none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.btn {
+  &-light {
+    @extend %btn-read-more;
+    background-color: $light-color;
+    color: set-text-color($light-color);
+    
+    // hover 動畫效果
+    &:hover {
+      @include transform(rotate(-10deg));
+      // 讓背景變深或淺
+      background-color:darken($light-color, 15%);
+    }
+  }
+  &-dark {
+    @extend %btn-read-more;
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+
+    &:hover {
+      @include transform(rotate(10deg));
+      background-color:lighten($dark-color, 15%);
+    }
+  }
+}
